@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>웹연습 06</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <h2>폼 연습</h2>
+    <form action="" method="post">
+         <fieldset><!-- 항목의집합 ex) input[속성값]-->
+            <legend>기본정보</legend> <!-- 이름표 -->
+            <label for="m_id">아이디</label> : <input type="text" id="m_id" title="아이디입력" autofocus size="50" maxlength="10" value="uzina88" disabled re> <br> <br> 
+            <!-- title:마우스 대면 풍선글 / disabled & readonly:아이디 변경안됨 -->
+            <label for="m_id">비밀번호</label> : <input type="password" placeholder="비밀번호를 입력하세요" required> <br> <br>
+            <!-- required:필수입력(유효성검증) -->
+            <input type="file" accept=".gif, .jpg, .png" title="jpg, png, gif 파일만 첨부가능">
+            <br> <br>
+            <input type="file" accept="video/*" title="video 파일만 첨부가능"> 
+            <br> <br>
+            <!-- 라디오 버튼 'name'이 같아야함. 'id'는 다르게 -->
+            <label>김기태가 좋아요?</label><br>
+            <input type="radio" name="rdo" id="ra1">좋아요<label for="ra1"></label><br>
+            <input type="radio" name="rdo" id="ra2" checked>싫어요<label for="ra2"></label>
+            
+            <label>김기태 어떤가요?</label>
+            <input type="checkbox" id="ck1" checked>
+            <label for="ck1">못생겼어요</label>
+            <input type="checkbox" id="ck2"checked>
+            <label for="ck2">재미없어요</label>
+            <input type="checkbox" id="ck3" disabled>
+            <label for="ck3">잘생겼어요</label>
+            <input type="checkbox" id="ck4" checked>
+            <label for="ck4">이상해요</label><br><br>
+            
+            
+            <label for="sel">주로 사용하시는 이메일은?</label>
+            <select name="" id="sel">
+                <option value="">선택안함</option>
+                <option value="">네이버</option>
+                <option value="">구글</option>
+                <option value="">다음</option>
+            </select><br><br>
+            <label for="sel2">주로 사용하시는 이메일은?</label>
+            <input type="text" list="email" id="sel2">
+            <datalist id="email">
+                <option value="선택안함">선택안함</option>
+                <option value="네이버">네이버</option>
+                <option value="구글">구글</option>
+                <option value="다음">다음</option>
+            </datalist><br><br>
+            <label for="memo">약관</label>
+            <textarea name="" id="memo" cols="60" rows="10" readonly>
+                    (주)경향신문 이용자 약관
+
+                    (주)경향신문의 회원 가입과 관련하여 본인으로부터 취득한 아래의 사용정보는 '정보통신망 이용 촉진 등에 관한 법률' 및 '신용정보의 이용 및 보호에 관한 법률'에 따라 개인 정보의 이용과 타인에게 제공 및 활용 시 본인의 동의를 얻어야 하는 정보입니다. 본인은 아래의 신상 정보를 신용 정보기관 또는 신용 정보업자 등에게 제공하여 본인의 신용을 판단하기 위한 자료로서의 활용과 공공 기관의 정책자료로서 활용, 내지는 회원 약관에 정의된 범위 내에서의 활용에 대해서 동의합니다.
+                    
+                    제 1 장 총 칙
+                    제 1 조 (목적)
+                    이 약관은 "(주)경향신문(이하 "회사")이 제공하는 모든 웹 서비스의 가입조건 및 이용에 관한 제반 사항과 기타 필요 사항을 규정함을 목적으로 합니다.
+                    
+                    제 2 조 (약관의 효력과 변경)
+                    1.본 약관은 (주)경향신문 회원에게 온라인을 통해 공시하거나 기타의 방법으로 회원에게 전달함으로써 효력을 발생합니다. 회원은 (주)경향신문 웹사이트 이용자로 (주)경향신문 사이트는 다음과 같습니다.
+                    ▷ 경향신문 khan.co.kr | kyunghyang.com
+                    ▷ 스포츠경향 sports.khan.co.kr | sportskhan.net
+                    ▷ 주간경향 weekly.khan.co.kr | newsmaker.khan.co.kr | weekly.kyunghyang.com
+                    ▷ 레이디경향 lady.khan.co.kr | lady.kyunghyang.com
+                    ▷ 경향비즈 bizn.khan.co.kr
+                    ▷ 스마일경향 smile.khan.co.kr
+                    2.회사는 사정 변경의 경우와 영업상 중요 사유가 있을 때 사전 고지 없이 이 약관을 변경할 권한을 가지고 있으며, 변경된 약관은 1항과 같은 방법으로 회원에게 통지, 효력이 발생합니다.
+                    3.이 약관에 동의하는 것은 정기적으로 웹을 방문하여 약관의 변경사항을 확인하는 것에 동의함을 의미합니다. 변경된 약관에 대한 정보를 알지 못해 발생하는 이용자의 피해는 회사에서 책임지지 않습니다.
+                    4.회원은 변경된 약관에 동의하지 않을 경우 회원 탈퇴(해지)를 요청할 수 있으며, 변경된 약관의 효력 발생일로부터 7일 이후에도 거부의사를 표시하지 아니하고 서비스를 계속 사용할 경우 약관의 변경 사항에 동의한 것으로 간주됩니다.
+            </textarea>
+        </fieldset>
+        <fieldset>
+            <legend>추가정보</legend>
+            <input type="color">
+            <br>
+            <input type="date">
+            <br>
+            <input type="datetime">
+            <br>
+            <input type="datetime-local">
+            <br>
+            <input type="time">
+            <br>
+            <input type="month">
+            <br>
+            <input type="week">
+            <br>
+            <input type="number">
+            <br>
+            <input type="range">
+            <br>
+            <input type="tel">
+            <br>
+            <input type="search">
+            <br>
+            <input type="url">
+            <br>
+            <input type="email">
+            <br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <input type="submit"><br><br>
+            <input type="reset"><br><br>
+            <input type="image" src="https://placehold.it/100x30"><br><br>
+            <input type="button" value="일반버튼"><br><br>
+            <button>일반버튼2</button><br><br>
+
+        </fieldset>        
+    </form> 
+</body>
+</html>
