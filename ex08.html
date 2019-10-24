@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>웹연습 08</title>
+    <style>
+    *{margin: 0;padding: 0;}
+    body, html{width: 100%;}
+    ::-webkit-scrollbar{display: none;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    #hd{position: fixed;top: 0;left: 0;z-index: 99;width: 100%;height: 140px;background:brown;}    
+    #ft{clear: both;width: 100%;height: 120px;background: dimgray; color: #fff;}
+    .hd_wrap, .ft_wrap{width: 1280px;margin: 0 auto; }
+    #tnb{float: right;}
+    #tnb li{float: left; padding: 14px;}
+    #tnb li a{color: #fff;}
+    #tnb li a:hover{color:#ffff00;font-weight: bold; }
+    
+    #gnb{clear: both;float: right;width: 1000px;}
+    #gnb li{float: left;width: 250px;}
+    #gnb li a{color: #333;display: block;font-size: 14px;line-height: 36px;padding-left: 24px;}    
+    #gnb li a.dep1{font-weight: bold;font-size: 16px;background:burlywood;color: #333;}
+    #gnb li .sub{display: none;}
+    #gnb li:hover .sub{display: block;}
+    /* #gnb:hover li .sub{display: block;} 전체가 보이도록 */
+    #gnb li .sub li{clear: both;}
+    #gnb li .sub li a{background:tan;}
+    #gnb li .sub li:hover a{background:darkgray;}
+    .logo{float: right;display: block;width: 120px;height: 50px;margin-right: 80px;}
+    .breadcrumb{width: 100%;height: auto;position: relative;}
+    #vs{width: 100%;}
+    #vs img{display: block;width: 100%;height: auto;}
+    .loc{width: 1280px;height: 42px;background: #333; color: #fff; position: absolute; left:calc(50% - 640px); bottom:0;  z-index: 22;}
+    /* left:50%;margin-left:-640px; = calc로 사용 가능 */
+    .loc li{float: left;height: 42px;}
+    .loc li a{display: block;line-height: 42px;padding:0 20px;color: #fff;}
+    .loc details{display: block;line-height: 42px;}
+    .loc details p{background: #333;}
+    #content{clear: both;width: 100%;}
+    .page{clear: both; position: relative; width: 100vw;height: 100vh;overflow: hidden;display: none;}
+    .page:target{display: block;}
+    .page_tit{padding-left:calc(calc(100% - 1280px) / 2); line-height: 42px; padding-top:150px;}
+    .blank{clear: both;width: 100%;min-height: 500px;}
+    #fnb{clear: both; width: 100%;}
+    #fnb li{float: left;}
+    #fnb li a{display: block;border-left:1px solid #555;border-right: 1px solid #222;
+    border-bottom:1px solid #111;border-top:1px solid #555; line-height:42px; color: #fff;text-align: center; min-width: 100px;}
+    .copyright{clear: both;line-height: 40px;}
+    </style>
+</head>
+<body>
+    <header id="hd">
+        <div class="hd_wrap">
+            <nav id="tnb">
+                <ul class="menu">
+                    <li><a href="">BRAND</a></li>
+                    <li><a href="">COFFEE</a></li>
+                    <li><a href="">FOOD</a></li>
+                    <li><a href="">STORE</a></li>
+                </ul>
+            </nav>
+            <nav id="gnb">
+                <ul class="menu">
+                    <li>
+                        <a href="sub1.html" class="dep1">브랜드</a>
+                        <ul class="sub">
+                            <li><a href="sub1.html#page1">브랜드스토리</a></li>                            
+                            <li><a href="sub1.html#page2">프로모션</a></li>
+                            <li><a href="sub1.html#page3">새소식</a></li>
+                            <li><a href="sub1.html#page4">공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="sub2.html" class="dep1">음료</a>
+                        <ul class="sub">
+                            <li><a href="sub2.html#page1">콜드브루</a></li>
+                            <li><a href="sub2.html#page2">에스프레소</a></li>
+                            <li><a href="sub2.html#page3">프라푸치노</a></li>
+                            <li><a href="sub2.html#page4">블렌디드</a></li>
+                            <li><a href="sub2.html#page5">주스</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="sub3.html" class="dep1">푸드</a>
+                        <ul class="sub">
+                            <li><a href="sub3.html#page1">베이커리</a></li>
+                            <li><a href="sub3.html#page2">케이크</a></li>
+                            <li><a href="sub3.html#page3">샌드위치</a></li>
+                            <li><a href="sub3.html#page4">요거트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="sub4.html" class="dep1">매장</a>
+                        <ul class="sub">
+                            <li><a href="sub4.html#page1">매장찾기</a></li>
+                            <li><a href="sub4.html#page2">매장이야기</a></li>
+                            <li><a href="sub4.html#page3">서비스 스토어</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <a href="" class="logo"><img src="./logo.png" alt="logo"></a>
+        </div>
+    </header>
+    <div class="breadcrumb">
+        <figure id="vs">
+            <img src="./cake-2459954_960_720.jpg" alt="">
+        </figure>
+        <ul class="loc">
+            <li class="seq1"><a href="index.html">HOME</a></li>
+            <li class="seq2"><a href="sub1.html">BRAND</a></li>
+            <li class="seq3">
+                <details open="open">
+                    <summary>BRAND</summary>
+                    <p>
+                        <a href="#page1">브랜드</a>
+                        <a href="#page2">음료</a>
+                        <a href="#page3">푸드</a>
+                        <a href="#page4">매장</a>
+                    </p>
+                </details>
+            </li>
+        </ul>
+    </div>
+    <main id="content">
+        <div class="page" id="page1">
+            <h2 class="page_tit">페이지1</h2>
+        </div>
+        <div class="page" id="page2">
+            <h2 class="page_tit">페이지2</h2>
+        </div>
+        <div class="page" id="page3">
+            <h2 class="page_tit">페이지3</h2>
+        </div>
+        <div class="page" id="page4">
+            <h2 class="page_tit">페이지4</h2>
+        </div>
+        <div class="page" id="page5">
+            <h2 class="page_tit">페이지5</h2>
+        </div>
+    </main>
+    <div class="blank"></div>
+    <footer id="ft">
+        <div class="ft_wrap">
+            <nav id="fnb">
+                <ul>
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">영상정보처리기기 운영방침</a></li>
+                    <li><a href="">홈페이지 이용약관</a></li>
+                    <li><a href="">위치정보 이용약관</a></li>
+                </ul>
+            </nav>
+            <p class="copyright">ⓒ 2019 Starbucks Coffee Company. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
