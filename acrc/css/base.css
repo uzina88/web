@@ -1,0 +1,226 @@
+@charset "utf-8";
+
+/*
+	권익위원회 국문 BASE STYLE
+	WRITER : Kim Cheon-hyun
+	WRITE DATE : 2016. 06. 13.
+	Last Modify Date : 2016. 06. 13.
+*/
+
+@font-face {
+  font-family: 'Nanum Pen Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/acrc/common/font/NanumPenScript-Regular.eot);
+  src: url(/acrc/common/font/NanumPenScript-Regular.eot?#iefix) format('embedded-opentype'),
+       url(/acrc/common/font/NanumPenScript-Regular.woff2) format('woff2'),
+       url(/acrc/common/font/NanumPenScript-Regular.woff) format('woff'),
+       url(/acrc/common/font/NanumPenScript-Regular.ttf) format('truetype');
+}
+/* @font-face {
+ font-family: 'NanumSquare';
+ src: url(/acrc/common/font/NanumSquareR.eot);
+ src: url(/acrc/common/font/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+      url(/acrc/common/font/NanumSquareR.woff) format('woff'),
+      url(/acrc/common/font/NanumSquareR.ttf) format('truetype');
+} */
+/* Base Style */
+/* 모든 요소 공간 0, 서체 크기 100%, 세로정렬 baseline, 배경색 투명 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; /* outline:0; */ border:0; font-size:100%; vertical-align:baseline;}
+input, select, textarea, button {margin:0; padding:0; font-size:100%;}
+em, address {font-style:normal;}
+/* 본문 기본 설정 */
+body {font:75%/1.4 '맑은 고딕','Malgun Gothic', 'MalgunGothic','돋움',Dotum,'굴림',Gulim,AppleGothic,sans-serif;}
+input, button { font-family:'맑은 고딕','Malgun Gothic', 'MalgunGothic'; }
+/* 영문 설정 */
+/* .lang-en, :lang(en) { font:75%/1.4 "Helvetica Neue", Helvetica, Verdana, Arial, Sans-Serief; } */
+
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+legend { position:absolute; left:0; top:0; width:1px; height:1px; text-indent:-10000px; overflow:hidden; }
+input,
+select,
+textarea {vertical-align:middle;}
+h1, h2, h3, h4, h5, h6 {font-size:1em;}
+h1 img, h2 img, h3 img,	h4 img, h5 img, h6 img {margin: 0;}
+img, fieldset {border:0 none;}
+img {vertical-align:top; max-width:100%;}
+hr { display: none; }
+
+:active, :focus { /* outline: 0; */ }
+a:link, a:visited {text-decoration:none;}
+a:hover, a:focus, a:active { text-decoration:underline;}
+a img {border:0;padding:0;}
+
+/* insert, delete */
+ins { text-decoration:none; }
+del { text-decoration:line-through; }
+
+/* 테이블 설정 */
+table {margin:0; border-collapse:collapse; border-spacing:0;}
+
+/* clearfix */
+.clearfix:after {
+	content:".";	/* the period is placed on the page as the last thing before the div closes */
+	display:block;	/* inline elements don't respond to the clear property */ 
+	height:0;		/* ensure the period is not visible */
+	clear:both;		/* make the container clear the period */
+	visibility:hidden;	/* further ensures the period is not visible */
+}
+.clearfix {display: inline-block;}   /* a fix for IE Mac */
+/* next a fix for the dreaded Guillotine bug in IE6 */
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+/* end of "no-extra-markup" clearing method */
+
+/* Default Code Style */
+body { color:#333; }
+a { color:#333; }
+
+/* Other Class Style */
+ul.ClearBoth li {float:none !important;}
+ul.FloatRight {float:right;}
+ul.FloatLeft li {float:left;}
+ul.BackgroundNone li {background:none !important;}
+
+.AlignLeft {text-align:left !important;}
+.AlignCenter {text-align:center !important;}
+.AlignRight {text-align:right !important;}
+.ValignTop {vertical-align:top !important;}
+.ValignMiddle{vertical-align:middle !important;}
+.ValignBottom {vertical-align:bottom !important;}
+.DisplayBlock {display:block;}
+.DisplayNone {display:none;}
+.FloatLeft {float:left;}
+.FloatRight {float:right;}
+.ClearBoth {clear:both;}
+.BackgroundNone {background:none !important;}
+.BorderNone {border:none !important;}
+.BorderRightNone {border-right:none !important;}
+.PaddingNone {padding:0 !important;}
+.MarginNone {margin:0 !important;}
+.FontWeightNormal {font-weight:normal !important;}
+.FontWeightBold {font-weight:bold !important;}
+.nowrap {white-space:nowrap;}
+
+/* SKIP NAVIGATION */
+.skipNav {position:absolute; width:100%; z-index:10;}
+.skipNav a {position:absolute; display:block; left:0; top:0; width:1px; height:1px; margin:-10000px 0 0 -10000px; padding:0; background-color:#033477; text-align:center; overflow:hidden; color:#fff; font-weight:bold;}
+.skipNav a:hover,
+.skipNav a:active,
+.skipNav a:focus {margin:0; width:100%; height:auto; padding:10px;}
+
+/* HIDDEN TEXT */
+.comment{position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden;}
+
+/* Global SPACE */
+.MAL0 {margin-left:0px !important;}
+.MAL5 {margin-left:5px !important;}
+.MAL10 {margin-left:10px !important;}
+.MAL15 {margin-left:15px !important;}
+.MAL20 {margin-left:20px !important;}
+.MAL25 {margin-left:25px !important;}
+.MAL30 {margin-left:30px !important;}
+.MAL35 {margin-left:35px !important;}
+.MAL40 {margin-left:40px !important;}
+.MAL45 {margin-left:45px !important;}
+.MAL50 {margin-left:50px !important;}
+.MAL60 {margin-left:60px !important;}
+.MAL70 {margin-left:70px !important;}
+
+.MAR5 {margin-right:5px !important;}
+.MAR10 {margin-right:10px !important;}
+.MAR15 {margin-right:15px !important;}
+.MAR20 {margin-right:20px !important;}
+.MAR25 {margin-right:25px !important;}
+.MAR30 {margin-right:30px !important;}
+.MAR35 {margin-right:35px !important;}
+.MAR40 {margin-right:40px !important;}
+
+.MAB0 {margin-bottom:0px !important;}
+.MAB5 {margin-bottom:5px !important;}
+.MAB10 {margin-bottom:10px !important;}
+.MAB15 {margin-bottom:15px !important;}
+.MAB20 {margin-bottom:20px !important;}
+.MAB25 {margin-bottom:25px !important;}
+.MAB30 {margin-bottom:30px !important;}
+.MAB35 {margin-bottom:35px !important;}
+.MAB40 {margin-bottom:40px !important;}
+
+.MAT0 {margin-top:0 !important;}
+.MAT5 {margin-top:5px !important;}
+.MAT10 {margin-top:10px !important;}
+.MAT15 {margin-top:15px !important;}
+.MAT20 {margin-top:20px !important;}
+.MAT25 {margin-top:25px !important;}
+.MAT30 {margin-top:30px !important;}
+.MAT35 {margin-top:35px !important;}
+.MAT40 {margin-top:40px !important;}
+.MAT50 {margin-top:50px !important;}
+.MAT55 {margin-top:55px !important;}
+.MAT60 {margin-top:60px !important;}
+
+.MAT-5 {margin-top:-5px !important;}
+.MAT-10 {margin-top:-10px !important;}
+.MAT-15 {margin-top:-15px !important;}
+.MAT-20 {margin-top:-20px !important;}
+.MAT-25 {margin-top:-25px !important;}
+.MAT-30 {margin-top:-30px !important;}
+.MAT-35 {margin-top:-35px !important;}
+.MAT-40 {margin-top:-40px !important;}
+
+.PAL5 {padding-left:5px !important;}
+.PAL10 {padding-left:10px !important;}
+.PAL15 {padding-left:15px !important;}
+.PAL20 {padding-left:20px !important;}
+.PAL25 {padding-left:25px !important;}
+.PAL30 {padding-left:30px !important;}
+.PAL35 {padding-left:35px !important;}
+.PAL40 {padding-left:40px !important;}
+.PAL45 {padding-left:45px !important;}
+.PAL50 {padding-left:50px !important;}
+
+.PAR5 {padding-right:5px !important;}
+.PAR10 {padding-right:10px !important;}
+.PAR15 {padding-right:15px !important;}
+.PAR20 {padding-right:20px !important;}
+.PAR25 {padding-right:25px !important;}
+.PAR30 {padding-right:30px !important;}
+.PAR35 {padding-right:35px !important;}
+.PAR40 {padding-right:40px !important;}
+
+.PAT5 {padding-top:5px !important;}
+.PAT10 {padding-top:10px !important;}
+.PAT15 {padding-top:15px !important;}
+.PAT20 {padding-top:20px !important;}
+.PAT25 {padding-top:25px !important;}
+.PAT30 {padding-top:30px !important;}
+.PAT35 {padding-top:35px !important;}
+.PAT40 {padding-top:40px !important;}
+
+.PAB0 {padding-bottom:0 !important;}
+.PAB5 {padding-bottom:5px !important;}
+.PAB10 {padding-bottom:10px !important;}
+.PAB15 {padding-bottom:15px !important;}
+.PAB20 {padding-bottom:20px !important;}
+.PAB25 {padding-bottom:25px !important;}
+.PAB30 {padding-bottom:30px !important;}
+.PAB35 {padding-bottom:35px !important;}
+.PAB40 {padding-bottom:40px !important;}
+
+.PADDING5{padding:5px !important;}
+.PADDING10{padding:10px !important;}
+.PADDING20{padding:20px !important;}
+.PADDING30{padding:30px !important;}
+.PADDING40{padding:40px !important;}
+.PADDING50{padding:50px !important;}
